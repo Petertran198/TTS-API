@@ -5,12 +5,13 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-# Rails.application.config.middleware.insert_before 0, Rack::Cors do
-#   allow do
-#     origins 'example.com'
-#
-#     resource '*',
-#       headers: :any,
-#       methods: [:get, :post, :put, :patch, :delete, :options, :head]
-#   end
-# end
+# enable this so other websites that is not postman the ability to ask for api info or allow other websites to use ur api
+ Rails.application.config.middleware.insert_before 0, Rack::Cors do
+   allow do
+     origins '*' # change this from example.com to * 
+
+     resource '*',
+       headers: :any,
+       methods: [:get, :post, :put, :patch, :delete, :options, :head]
+   end
+ end
