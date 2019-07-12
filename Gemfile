@@ -45,3 +45,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rack-cors' #
 gem 'active_model_serializers' # Gem for controlling how data such as JSON is put together filters/change data 
+
+# gem to send authentication info for api's 
+#Knock is an authentication solution for Rails API-only application based on JSON Web Tokens.
+gem 'knock', github: 'psantos10/knock', branch: 'master'

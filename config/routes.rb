@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         resources :tasks
         resources :users
 
+        post 'user_token' => 'user_token#create' #provided by knock so u can get the token for api authentication 
       end
   end
   
